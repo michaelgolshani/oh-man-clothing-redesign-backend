@@ -50,25 +50,28 @@ body {
   font-family: var(--font-jost);
   margin: 0;
   padding: 0;
-  color: var(--color-dark-500);
+  color: var(--theme-text);
+  // color: var(--color-dark-500);
 
   //added
   display: flex;
   flex-flow: column;
 }
 
-//added 
-.main{
-  flex:1 1 auto;
+//added
+.main {
+  flex: 1 1 auto;
 }
 
 
 ::selection {
+  // background: var(--color-dark-500);
   background: var(--theme-success-500);
   color: var(--color-base-800);
 }
 
 ::-moz-selection {
+  // background: var(--color-dark-50);
   background: var(--theme-success-500);
   color: var(--color-base-800);
 }
@@ -104,21 +107,28 @@ h6 {
 }
 
 p {
-  margin: var(--base) 0;
+  // margin: var(--base) 0;
 
-  @include mid-break {
-    margin: calc(var(--base) * .75) 0;
-  }
+  margin: 0;
+
+  // @include mid-break {
+  //   margin: calc(var(--base) * .75) 0;
+  // }
 }
 
 ul,
 ol {
-  padding-left: var(--base);
-  margin: 0 0 var(--base);
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  // padding-left: var(--base);
+  // margin: 0 0 var(--base);
 }
 
 a {
   color: currentColor;
+  // color: var(--color-dark-500);
 
   &:focus {
     opacity: .8;
