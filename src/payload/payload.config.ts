@@ -28,6 +28,7 @@ import { Header } from './globals/Header'
 import { Settings } from './globals/Settings'
 import { priceUpdated } from './stripe/webhooks/priceUpdated'
 import { productUpdated } from './stripe/webhooks/productUpdated'
+import formBuilder from '@payloadcms/plugin-form-builder'
 
 const generateTitle: GenerateTitle = () => {
   return 'My Store'
@@ -129,6 +130,12 @@ export default buildConfig({
         'product.created': productUpdated,
         'product.updated': productUpdated,
         'price.updated': priceUpdated,
+      },
+    }),
+    formBuilder({
+      fields: {
+        // maybe change later
+        payment: false
       },
     }),
     redirects({
