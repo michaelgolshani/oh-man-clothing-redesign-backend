@@ -21,7 +21,7 @@ export const Media: CollectionConfig = {
       type: 'richText',
       editor: slateEditor({
         admin: {
-          elements: ['link'],
+          elements: ['link', 'textAlign'],
         },
       }),
     },
