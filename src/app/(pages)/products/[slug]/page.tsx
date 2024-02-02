@@ -61,19 +61,19 @@ export default async function Product({ params: { slug } }) {
                 type: 'p',
                 children: [
                   {
-                    text: 'The products displayed here are individually selected for this page. Admins can select any number of related products to display here and the layout will adjust accordingly. Alternatively, you could swap this out for the "Archive" block to automatically populate products by category complete with pagination. To manage related posts, ',
+                    text: '',
                   },
                   {
                     type: 'link',
                     url: `/admin/collections/products/${product.id}`,
                     children: [
                       {
-                        text: 'navigate to the admin dashboard',
+                        text: '',
                       },
                     ],
                   },
                   {
-                    text: '.',
+                    text: '',
                   },
                 ],
               },
