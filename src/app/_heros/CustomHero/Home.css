@@ -1,0 +1,324 @@
+/* hero */
+section.hero {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* hero-img */
+section.hero-img {
+  position: relative;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+section.hero-img .hero-img-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  height: 100vh; /* Set height to 100% of viewport height */
+  overflow: hidden; /* Hide any overflow */
+  position: relative; /* Ensure proper positioning */
+}
+
+section.hero-img .hero-img-container .hero-image,
+section.hero-img video.hero-video
+{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the container */
+  position: absolute; /* Position the video absolutely within its container */
+  top: 0;
+  left: 0;
+}
+
+
+
+section.hero-img .hero-img-copy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+  mix-blend-mode: difference;
+}
+
+.hero-img-copy-h1 {
+  font-size: 200px;
+  color: #fff;
+}
+
+/* projects */
+/* .projects,
+.projects-header {
+  padding-top: 20em;
+}
+
+section.projects .projects-copy,
+section.projects-header .projects-copy {
+  width: 100%;
+  display: flex;
+  margin-bottom: 2em;
+}
+
+section.projects .projects-copy .projects-copy-h1,
+section.projects-header .projects-copy .projects-copy-h1 {
+  flex: 3;
+}
+
+section.projects .projects-copy .projects-copy-ws,
+section.projects-header .projects-copy .projects-copy-ws {
+  flex: 2;
+}
+
+.projects-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.projects-list a {
+  width: 100%;
+}
+
+.projects-list .project {
+  margin: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  flex: 1 0 auto;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+
+.projects-list .project .project-img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0.5em;
+}
+
+.projects-list .project .project-img-1 {
+  background: url("../../assets/project-img-1.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.projects-list .project .project-img-2 {
+  background: url("../../assets/project-img-2.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.projects-list .project .project-img-3 {
+  background: url("../../assets/project-img-3.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.projects-list .project .project-img-4 {
+  background: url("../../assets/project-img-4.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.projects-list .project .project-name p {
+  font-weight: 500;
+}
+
+.projects-list .project .project-name p,
+.projects-list .project .project-category p {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+} */
+
+/* article */
+/* .article-container {
+  width: 100%;
+  height: 700px;
+  background: url("../../assets/make-your-own-luck-hq-whitebackground.png") no-repeat 50% 50%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.article-container .article-container-copy {
+  width: 80%;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.article-container .article-container-copy a {
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+} */
+
+/* services */
+/* section.services {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 10em;
+}
+
+section.services .services-copy-h1 {
+  flex: 5;
+}
+
+section.services .services-copy-p {
+  flex: 2;
+} */
+
+/* feature img */
+/* section.feature-img {
+  padding: 0;
+  height: 800px;
+}
+
+section.feature-img .feature-img-container {
+  width: 100%;
+  height: 100%;
+}
+
+section.feature-img .feature-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+/* clients */
+/* section.clients .client-copy {
+  display: flex;
+  margin-top: 2em;
+}
+
+section.clients .client-copy .client-copy-ws {
+  flex: 3;
+}
+
+section.clients .client-copy .client-copy-p {
+  flex: 2;
+  padding: 0 10em;
+  margin-bottom: 12em;
+}
+
+section.clients .client-copy .client-copy-p p {
+  font-size: 14px;
+} */
+
+/* logos */
+/* section.logos {
+  padding: 0;
+}
+
+section.logos .client-logos {
+  width: 2000px;
+  display: flex;
+  justify-content: space-around;
+}
+
+section.logos .client-logo {
+  margin-top: 4em;
+  margin-bottom: 2em;
+  width: 200px;
+  height: 100px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-transform: uppercase;
+}
+
+section.logos .client-logos img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+} */
+
+/* footer */
+/* section.footer {
+  padding: 0;
+  height: 100vh;
+  background: #fff;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+section.footer .footer-copy .footer-copy-h1 a {
+  text-decoration: none;
+  color: #000;
+}
+
+section.footer .footer-copy .footer-copy-h1 a h1 {
+  font-size: 200px;
+  font-weight: 400;
+  letter-spacing: -5px;
+}
+
+section.footer .footer-copy .footer-copy-text {
+  margin: 2em 0;
+}
+
+section.footer .footer-copy .footer-copy-text p {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+section.footer .footer-copy .footer-copy-text p a {
+  text-decoration: none;
+  color: #000;
+} */
+
+
+
+
+
+@media (max-width: 900px) {
+  section.hero-img .hero-img-copy {
+    flex-direction: column !important;
+    gap: 2em;
+    line-height: 150px;
+
+  }
+
+  section.hero-img .hero-img-copy .hero-img-copy-h1,
+  section.hero-img .hero-img-copy .hero-img-copy-p {
+    width: 100%;
+    font-size: 150px;
+  }
+
+  section.hero-img .hero-img-copy .hero-img-copy-p p {
+    text-align: left !important;
+  }
+
+}
+
+@media (max-width:500px){
+  section.hero-img .hero-img-copy .hero-img-copy-p{
+    font-size: 100px !important;
+  }
+
+}
