@@ -21,13 +21,13 @@ const blockComponents = {
 }
 
 export const Blocks: React.FC<{
-  blocks: (Page['layout'][0] | RelatedProductsProps)[]
+  blocks: Page['layout']
   disableTopPadding?: boolean
 }> = props => {
-  const { disableTopPadding, blocks, } = props
+  const { disableTopPadding, blocks } = props
 
   const hasBlocks = blocks && Array.isArray(blocks) && blocks.length > 0
-
+console.log("blocks: ", blocks);
   if (hasBlocks) {
     return (
       <Fragment>
