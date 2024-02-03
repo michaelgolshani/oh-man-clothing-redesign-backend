@@ -10,7 +10,7 @@ import RichText from '../../_components/RichText'
 import hero from '../../../../media/front-compressed.jpg'
 import Image from 'next/image'
 import './Home.css'
-import { Sixtyfour } from 'next/font/google'
+
 
 import classes from './index.module.scss'
 
