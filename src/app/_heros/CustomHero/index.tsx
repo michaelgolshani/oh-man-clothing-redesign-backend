@@ -11,12 +11,11 @@ import hero from '../../../../media/front-compressed.jpg'
 import Image from 'next/image'
 import './Home.css'
 
-
 import classes from './index.module.scss'
 
 export const CustomHero: React.FC<Page['hero']> = ({ richText, media, links }) => {
   const containerRef = useRef(null)
-  let mediaContent;
+  let mediaContent
 
   if (media) {
     if (typeof media === 'string') {
@@ -38,7 +37,7 @@ export const CustomHero: React.FC<Page['hero']> = ({ richText, media, links }) =
       <section className="hero-img" data-scroll-section>
         <div className="hero-img-container">{mediaContent}</div>
         <div className="hero-img-copy">
-          <div className="hero-img-copy-h1" style={{fontFamily: 'honk, sans-serif' }}>
+          <div className="hero-img-copy-h1" style={{ fontFamily: 'honk, sans-serif' }}>
             <RichText content={richText} />
           </div>
         </div>

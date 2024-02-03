@@ -5,7 +5,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-import { Header } from '../../../payload/payload-types'
+import type { Header } from '../../../payload/payload-types'
 import { fetchHeader } from '../../_api/fetchGlobals'
 import { Gutter } from '../Gutter'
 import { HeaderNav } from './Nav'
@@ -24,7 +24,7 @@ export async function Header() {
 
   return (
     <>
-      <HeaderComponent header={header}/>
+      <HeaderComponent header={header} />
     </>
   )
 }
