@@ -28,7 +28,7 @@ import { Header } from './globals/Header'
 import { Settings } from './globals/Settings'
 import { priceUpdated } from './stripe/webhooks/priceUpdated'
 import { productUpdated } from './stripe/webhooks/productUpdated'
-import formBuilder from '@payloadcms/plugin-form-builder'
+import FormBuilder from '@payloadcms/plugin-form-builder'
 
 const generateTitle: GenerateTitle = () => {
   return 'My Store'
@@ -132,9 +132,9 @@ export default buildConfig({
         'price.updated': priceUpdated,
       },
     }),
-    formBuilder({
+    FormBuilder({
       fields: {
-        // maybe change later
+        // maybe change later w/stripe
         payment: false
       },
     }),

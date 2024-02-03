@@ -11,6 +11,7 @@ export type Props = {
   el?: 'button' | 'link' | 'a'
   onClick?: () => void
   href?: string
+  form?: string
   newTab?: boolean
   className?: string
   type?: 'submit' | 'button'
@@ -23,6 +24,7 @@ export const Button: React.FC<Props> = ({
   label,
   newTab,
   href,
+  form,
   appearance,
   className: classNameFromProps,
   onClick,
@@ -64,6 +66,7 @@ export const Button: React.FC<Props> = ({
   return (
     <Element
       href={href}
+      form={form}
       className={className}
       type={type}
       {...newTabProps}

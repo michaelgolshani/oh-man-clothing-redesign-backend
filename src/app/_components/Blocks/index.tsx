@@ -9,6 +9,7 @@ import { RelatedProducts, type RelatedProductsProps } from '../../_blocks/Relate
 import { toKebabCase } from '../../_utilities/toKebabCase'
 import { BackgroundColor } from '../BackgroundColor/index'
 import { VerticalPadding, VerticalPaddingOptions } from '../VerticalPadding/index'
+import { FormBlock } from './Form'
 
 const blockComponents = {
   cta: CallToActionBlock,
@@ -16,13 +17,14 @@ const blockComponents = {
   mediaBlock: MediaBlock,
   archive: ArchiveBlock,
   relatedProducts: RelatedProducts,
+  formBlock: FormBlock,
 }
 
 export const Blocks: React.FC<{
   blocks: (Page['layout'][0] | RelatedProductsProps)[]
   disableTopPadding?: boolean
 }> = props => {
-  const { disableTopPadding, blocks } = props
+  const { disableTopPadding, blocks, } = props
 
   const hasBlocks = blocks && Array.isArray(blocks) && blocks.length > 0
 
@@ -30,7 +32,13 @@ export const Blocks: React.FC<{
     return (
       <Fragment>
         {blocks.map((block, index) => {
-          const { blockName, blockType } = block
+          const { blockName, blockType, form } = block
+
+          const isFormBlock = blockType === 'formBlock'
+          {
+            /*@ts-ignore*/
+          }
+          const formID: string = isFormBlock && form && form.id
 
           if (blockType && blockType in blockComponents) {
             const Block = blockComponents[blockType]
@@ -63,7 +71,8 @@ export const Blocks: React.FC<{
             if (Block) {
               return (
                 <BackgroundColor key={index} invert={blockIsInverted}>
-                  <VerticalPadding top={paddingTop} bottom={paddingBottom}>
+                  <VerticalPadding key={isFormBlock ? formID : index} top={paddingTop} bottom={paddingBottom}>
+                    {/*@ts-ignore*/}
                     <Block
                       // @ts-expect-error
                       id={toKebabCase(blockName)}
