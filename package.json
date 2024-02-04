@@ -19,7 +19,10 @@
     "generate:graphQLSchema": "PAYLOAD_CONFIG_PATH=src/payload/payload.config.ts payload generate:graphQLSchema",
     "lint": "eslint src",
     "lint:fix": "eslint --fix --ext .ts,.tsx src",
-    "payload": "cross-env PAYLOAD_CONFIG_PATH=src/payload/payload.config.ts payload"
+    "payload": "cross-env PAYLOAD_CONFIG_PATH=src/payload/payload.config.ts payload",
+    "prettier": "npx prettier src test --check",
+    "prettier:fix": "npm run prettier -- --write",
+    "format": "npm run prettier:fix && npm run lint:fix"
   },
   "dependencies": {
     "@payloadcms/bundler-webpack": "^1.0.0",
