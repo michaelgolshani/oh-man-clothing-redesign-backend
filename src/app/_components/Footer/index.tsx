@@ -31,7 +31,7 @@ export async function Footer() {
             <img
               className={classes.logo}
               alt="Oh Man! Clothing Logo"
-              src="/LOGO_NAV_BAR.webp" width={102} height={15}
+              src="/LOGO_NAV_BAR.webp"
             />
           </picture>
         </Link>
