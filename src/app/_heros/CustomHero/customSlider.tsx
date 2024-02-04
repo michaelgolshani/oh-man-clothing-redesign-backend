@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import './Home.css'
+import Image from 'next/image'
+
 import image1 from '../../../../public/oh-man-images/image-1.jpg'
 import image2 from '../../../../public/oh-man-images/image-2.jpg'
 import image3 from '../../../../public/oh-man-images/image-3.jpg'
@@ -10,7 +11,8 @@ import image6 from '../../../../public/oh-man-images/image-6.jpg'
 import image7 from '../../../../public/oh-man-images/image-7.jpg'
 import image8 from '../../../../public/oh-man-images/image-8.jpg'
 import image9 from '../../../../public/oh-man-images/image-9.jpg'
-import Image from 'next/image'
+
+import './Home.css'
 
 const CustomSlider = () => {
   const targetRef = useRef(0)

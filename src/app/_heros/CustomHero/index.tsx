@@ -10,6 +10,7 @@ import { CMSLink } from '../../_components/Link'
 import { Media } from '../../_components/Media'
 import RichText from '../../_components/RichText'
 import CustomSlider from './customSlider'
+
 import './Home.css'
 
 import classes from './index.module.scss'
