@@ -29,7 +29,7 @@ export const staticCart: Page = {
         type: 'p',
         children: [
           {
-            text: 'This cart saves to local storage so you can continue shopping later. Once you authenticate with Payload, your cart will sync to your user profile so you can continue shopping from any device. ',
+            text: '',
           },
           {
             text: 'Your database does not have a cart page yet.',
