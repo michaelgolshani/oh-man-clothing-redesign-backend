@@ -9,7 +9,7 @@ import { Gutter } from '../../_components/Gutter'
 import { CMSLink } from '../../_components/Link'
 import { Media } from '../../_components/Media'
 import RichText from '../../_components/RichText'
-
+import CustomSlider from './customSlider'
 import './Home.css'
 
 import classes from './index.module.scss'
@@ -34,15 +34,39 @@ export const CustomHero: React.FC<Page['hero']> = ({ richText, media, links }) =
   }
 
   return (
-    <div className="home" data-scroll-container ref={containerRef} id="scroll-container">
-      <section className="hero-img" data-scroll-section>
-        <div className="hero-img-container">{mediaContent}</div>
-        <div className="hero-img-copy">
-          <div className="hero-img-copy-h1" style={{ fontFamily: 'honkwarp, sans-serif' }}>
-            <RichText content={richText} />
+    <>
+      <div className="home" data-scroll-container ref={containerRef} id="scroll-container">
+        <section className="hero-img" data-scroll-section>
+          <div className="hero-img-container">{mediaContent}</div>
+          <div className="hero-img-copy">
+            <div className="hero-img-copy-h1" style={{ fontFamily: 'honkwarp, sans-serif' }}>
+              <RichText content={richText} />
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div className="scroll-img-slider-container">
+        <div className="sidebar">
+          <div className="sidebar-item">
+            <p id="header">
+              life's a
+              <br />
+              gamble
+            </p>
+            <p>
+              Printed in Los Angeles
+              <br />
+              (Explore Catalog)
+            </p>
+          </div>
+          <div className="sidebar-item">
+            {/* <p>/I2IVU98</p> */}
+            {/* <p>Scroll Experience</p> */}
           </div>
         </div>
-      </section>
-    </div>
+        <CustomSlider />
+      </div>
+    </>
   )
 }
