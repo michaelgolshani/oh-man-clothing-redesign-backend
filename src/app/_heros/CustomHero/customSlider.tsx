@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import gsap from 'gsap'
+import { gsap } from 'gsap'
 import './Home.css'
 import image1 from '../../../../public/oh-man-images/image-1.jpg'
 import image2 from '../../../../public/oh-man-images/image-2.jpg'
