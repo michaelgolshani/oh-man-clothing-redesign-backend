@@ -28,6 +28,7 @@ import { Header } from './globals/Header'
 import { Settings } from './globals/Settings'
 import { priceUpdated } from './stripe/webhooks/priceUpdated'
 import { productUpdated } from './stripe/webhooks/productUpdated'
+import ContactUs from '../app/(pages)/contact-us/page'
 
 const generateTitle: GenerateTitle = () => {
   return 'My Store'
@@ -96,6 +97,11 @@ export default buildConfig({
     Boolean,
   ),
   endpoints: [
+    {
+      path: '/contact-us',
+      method: 'get',
+      handler: ContactUs
+    },
     {
       path: '/create-payment-intent',
       method: 'post',
