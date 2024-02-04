@@ -8,8 +8,8 @@ import Link from 'next/link'
 import type { Header } from '../../../payload/payload-types'
 import { fetchHeader } from '../../_api/fetchGlobals'
 import { Gutter } from '../Gutter'
-import { HeaderNav } from './Nav'
 import HeaderComponent from './HeaderComponent'
+import { HeaderNav } from './Nav'
 
 import classes from './index.module.scss'
 

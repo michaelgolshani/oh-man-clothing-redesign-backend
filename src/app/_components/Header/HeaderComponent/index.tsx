@@ -1,11 +1,12 @@
 import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+
 import { Header } from '../../../../payload/payload-types'
 import { Gutter } from '../../Gutter'
-import Link from 'next/link'
-import Image from 'next/image'
+import { HeaderNav } from '../Nav'
 
 import classes from './index.module.scss'
-import { HeaderNav } from '../Nav'
 
 const HeaderComponent = ({ header }: { header: Header }) => {
   return (

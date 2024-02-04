@@ -42,49 +42,47 @@ export const ProductHero: React.FC<{
     //       />
     //     </Gutter>
     //   )}
-      <Gutter className={classes.productHero}>
-        <div className={classes.content}>
-          <div className={classes.categories}>
-            {categories?.map((category, index) => {
-              if (typeof category === 'object' && category !== null) {
-                const { title: categoryTitle } = category
+    <Gutter className={classes.productHero}>
+      <div className={classes.content}>
+        <div className={classes.categories}>
+          {categories?.map((category, index) => {
+            if (typeof category === 'object' && category !== null) {
+              const { title: categoryTitle } = category
 
-                const titleToUse = categoryTitle || 'Untitled category'
+              const titleToUse = categoryTitle || 'Untitled category'
 
-                const isLast = index === categories.length - 1
+              const isLast = index === categories.length - 1
 
-                return (
-                  <Fragment key={index}>
-                    {titleToUse}
-                    {!isLast && <Fragment>, &nbsp;</Fragment>}
-                  </Fragment>
-                )
-              }
+              return (
+                <Fragment key={index}>
+                  {titleToUse}
+                  {!isLast && <Fragment>, &nbsp;</Fragment>}
+                </Fragment>
+              )
+            }
 
-              return null
-            })}
-          </div>
-          <h1 className={classes.title}>{title}</h1>
-          <div>
-            <p className={classes.description}>
-              {`${description ? `${description}` : ''}`}
-            </p>
-          </div>
-          <Price product={product} button={false} />
-          <AddToCartButton product={product} className={classes.addToCartButton} />
+            return null
+          })}
         </div>
-        <div className={classes.media}>
-          <div className={classes.mediaWrapper}>
-            {!metaImage && <div className={classes.placeholder}>No image</div>}
-            {metaImage && typeof metaImage !== 'string' && (
-              <Media imgClassName={classes.image} resource={metaImage} fill />
-            )}
-          </div>
-          {metaImage && typeof metaImage !== 'string' && metaImage?.caption && (
-            <RichText content={metaImage.caption} className={classes.caption} />
+        <h1 className={classes.title}>{title}</h1>
+        <div>
+          <p className={classes.description}>{`${description ? `${description}` : ''}`}</p>
+        </div>
+        <Price product={product} button={false} />
+        <AddToCartButton product={product} className={classes.addToCartButton} />
+      </div>
+      <div className={classes.media}>
+        <div className={classes.mediaWrapper}>
+          {!metaImage && <div className={classes.placeholder}>No image</div>}
+          {metaImage && typeof metaImage !== 'string' && (
+            <Media imgClassName={classes.image} resource={metaImage} fill />
           )}
         </div>
-      </Gutter>
+        {metaImage && typeof metaImage !== 'string' && metaImage?.caption && (
+          <RichText content={metaImage.caption} className={classes.caption} />
+        )}
+      </div>
+    </Gutter>
     // </Fragment>
   )
 }

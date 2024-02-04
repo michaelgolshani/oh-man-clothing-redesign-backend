@@ -1,14 +1,15 @@
 'use client'
 
-import React, { Fragment } from 'react'
-import { useState, useEffect, useRef } from 'react'
+import React, { Fragment, useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
+
+import hero from '../../../../media/front-compressed.jpg'
 import { Page } from '../../../payload/payload-types'
 import { Gutter } from '../../_components/Gutter'
 import { CMSLink } from '../../_components/Link'
 import { Media } from '../../_components/Media'
 import RichText from '../../_components/RichText'
-import hero from '../../../../media/front-compressed.jpg'
-import Image from 'next/image'
+
 import './Home.css'
 
 import classes from './index.module.scss'
@@ -37,7 +38,7 @@ export const CustomHero: React.FC<Page['hero']> = ({ richText, media, links }) =
       <section className="hero-img" data-scroll-section>
         <div className="hero-img-container">{mediaContent}</div>
         <div className="hero-img-copy">
-          <div className="hero-img-copy-h1" style={{fontFamily: 'honkwarp, sans-serif' }}>
+          <div className="hero-img-copy-h1" style={{ fontFamily: 'honkwarp, sans-serif' }}>
             <RichText content={richText} />
           </div>
         </div>
