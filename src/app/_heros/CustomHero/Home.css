@@ -1,3 +1,29 @@
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("../../../app/fonts/NeueMontreal-Light.otf") format("opentype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("../../../app/fonts/NeueMontreal-Regular.otf") format("opentype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("../../../app/fonts/NeueMontreal-Medium.otf") format("opentype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("../../../app/fonts/NeueMontreal-Bold.otf") format("opentype");
+  font-weight: 800;
+}
+
+
+
 /* hero */
 section.hero {
   height: 400px;
@@ -448,6 +474,7 @@ section.projects-header .projects-copy .projects-copy-ws {
   list-style: none;
   display: flex;
   justify-content: space-around;
+  padding-bottom: 15vh;
 }
 
 .projects-list a {
@@ -503,4 +530,85 @@ section.projects-header .projects-copy .projects-copy-ws {
   font-size: 14px;
   color: #fff;
   text-decoration: none;
+}
+
+
+.soul-container {
+  padding-top: 10vh;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+
+
+
+
+#about-sticky-wrap {
+  position: relative;
+  padding: 0;
+}
+
+.about-sticky-1 {
+  width: 100vw;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  color: #000;
+  padding: 4em 2em 4em 2em;
+}
+
+.about-sticky-2 {
+  width: 100vw;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  background: #000;
+  color: #fff;
+  padding: 4em 2em 4em 2em;
+}
+
+.about-sticky-3 {
+  width: 100vw;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  color: #000;
+  padding: 4em 2em 4em 2em;
+}
+
+.about-sticky .sticky-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4em 0 6em 0;
+}
+
+.sticky-content h1 {
+  font-size: 60px !important;
+}
+
+.sticky-content h1.num {
+  font-size: 120px !important;
+  font-family: "Neue Montreal";
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+
+.sticky-font {
+  font-family: "Neue Montreal";
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+
+@media (max-width: 900px) {
+  .about-sticky .sticky-content .sitcky-content-h1 h1 {
+    font-size: 32px !important;
+  }
 }

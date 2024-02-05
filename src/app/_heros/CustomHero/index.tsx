@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import Image from 'next/image'
 
 import hero from '../../../../media/front-compressed.jpg'
+import soul from '../../../../public/oh-man-images/SOUL-4.jpeg'
 import { Page } from '../../../payload/payload-types'
 import { Gutter } from '../../_components/Gutter'
 import { CMSLink } from '../../_components/Link'
@@ -113,6 +114,50 @@ export const CustomHero: React.FC<Page['hero']> = ({ richText, media, links }) =
               <p>1n 2 Wishin' Premium Tee in Black</p>
             </div>
           </a>
+        </div>
+      </section>
+      <section className="soul-container" style={{ position: 'relative', height: '100vh' }}>
+        <Image
+          src={soul}
+          alt="Description of the image"
+          layout="fill" // Set the layout to fill
+          objectFit="cover" // Use objectFit to cover the container
+        />
+      </section>
+
+      <section id="about-sticky-wrap" data-scroll-section>
+        <div
+          className="about-sticky about-sticky-1"
+          data-scroll
+          data-scroll-sticky
+          data-scroll-target="#about-sticky-wrap"
+        >
+          <div className="sticky-content">
+            <div className="sitcky-content-h1">
+              <h1 className="num">BET ON YOURSELF</h1>
+            </div>
+            <div className="sitcky-content-h1">
+              {/* <h1 className="sticky-font">Design:</h1> */}
+              <h1 className="sticky-font">
+                "Lucky for Life" is about carving your own path, where what may appear as good
+                fortune is actually the result of your unrelenting dedication and perseverance.
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div className="about-sticky about-sticky-2">
+          <div className="sticky-content">
+            <div className="sitcky-content-h1">
+              <h1 className="num">PERSEVERE</h1>
+            </div>
+            <div className="sitcky-content-h1">
+              {/* <h1 className="sticky-font">Development:</h1> */}
+              <h1 className="sticky-font">
+                the hard work goes unnoticed. Your legacy will speak for itself. And all while you
+                make it appear utterly effortless.
+              </h1>
+            </div>
+          </div>
         </div>
       </section>
     </>
