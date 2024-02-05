@@ -314,6 +314,30 @@ section.footer .footer-copy .footer-copy-text p a {
     text-align: left !important;
   }
 
+  section.projects .projects-copy,
+  section.projects-header .projects-copy {
+    flex-direction: column;
+  }
+
+  section.projects .projects-copy .projects-copy-h1,
+  section.projects-header .projects-copy .projects-copy-h1 {
+    width: 100%;
+  }
+
+  section.projects .projects-copy .projects-copy-ws,
+  section.projects-header .projects-copy .projects-copy-ws {
+    display: none;
+  }
+
+  .projects-list {
+    flex-direction: column;
+  }
+
+  .projects-list .project .project-name p,
+  .projects-list .project .project-category p {
+    font-size: 12px;
+  }
+
 }
 
 @media (max-width:500px){
@@ -394,4 +418,89 @@ p#header {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+
+
+
+/* projects */
+
+section.projects .projects-copy,
+section.projects-header .projects-copy {
+  width: 100%;
+  display: flex;
+  margin-bottom: 2em;
+}
+
+section.projects .projects-copy .projects-copy-h1,
+section.projects-header .projects-copy .projects-copy-h1 {
+  flex: 3;
+}
+
+section.projects .projects-copy .projects-copy-ws,
+section.projects-header .projects-copy .projects-copy-ws {
+  flex: 2;
+}
+
+.projects-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.projects-list a {
+  width: 100%;
+}
+
+.projects-list .project {
+  margin: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  /* flex: 1 0 auto; */
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+
+.projects-list .project .project-img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0.5em;
+}
+
+.projects-list .project .project-img-1 {
+  background: url('../../../../public/oh-man-images/lucky-13-vintage-black.png') no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.projects-list .project .project-img-2 {
+  background: url('../../../../public/oh-man-images/manifest-vintage-black.png') no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.projects-list .project .project-img-3 {
+  background: url('../../../../public/oh-man-images/peace-tan-hoodie.png') no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.projects-list .project .project-img-4 {
+  background: url('../../../../public/oh-man-images/timeless-vibration-black.png') no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.projects-list .project .project-name p {
+  font-weight: 500;
+}
+
+.projects-list .project .project-name p,
+.projects-list .project .project-category p {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
 }

@@ -1,6 +1,7 @@
 'use client'
 
 import React, { Fragment, useEffect, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import Image from 'next/image'
 
 import hero from '../../../../media/front-compressed.jpg'
@@ -68,6 +69,44 @@ export const CustomHero: React.FC<Page['hero']> = ({ richText, media, links }) =
         </div>
         <CustomSlider />
       </div>
+
+      <section className="projects" data-scroll-section>
+        <div className="projects-copy">
+          <div className="projects-copy-ws"></div>
+
+          <div className="projects-copy-h1">
+            <h1>Design with intention.</h1>
+          </div>
+        </div>
+        <div className="projects-list">
+          <a href="/products/lucky-for-life-premium-tee-in-vintage-black" className="project">
+            <div className="project-img project-img-1"></div>
+            <div className="project-name">
+              <p>"Lucky" for Life Premium Tee in Vintage Black</p>
+            </div>
+          </a>
+          <a href="/products/manifest-premium-knit-tee-in-vintage-black" className="project">
+            <div className="project-img project-img-2"></div>
+            <div className="project-name">
+              <p>Manifest Premium Knit Tee in Vintage Black</p>
+            </div>
+          </a>
+        </div>
+        <div className="projects-list">
+          <a href="/products/peace-on-earth-premium-hoodie-in-desert-sands" className="project">
+            <div className="project-img project-img-3"></div>
+            <div className="project-name">
+              <p>Peace on Earth Premium Hoodie in Desert Sands</p>
+            </div>
+          </a>
+          <a href="/products/1n-2-wishin-premium-tee-in-black" className="project">
+            <div className="project-img project-img-4"></div>
+            <div className="project-name">
+              <p>1n 2 Wishin' Premium Tee in Black</p>
+            </div>
+          </a>
+        </div>
+      </section>
     </>
   )
 }
