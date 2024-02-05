@@ -18,6 +18,14 @@ import classes from './index.module.scss'
 
 export const CustomHero: React.FC<Page['hero']> = ({ richText, media, links }) => {
   const containerRef = useRef(null)
+
+  useEffect(() => {
+    ;(async () => {
+      const LocomotiveScroll = (await import('locomotive-scroll')).default
+      const locomotiveScroll = new LocomotiveScroll()
+    })()
+  }, [])
+
   let mediaContent
 
   if (media) {

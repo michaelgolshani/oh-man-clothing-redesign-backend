@@ -39,6 +39,7 @@
     "escape-html": "^1.0.3",
     "express": "^4.17.1",
     "gsap": "^3.12.5",
+    "locomotive-scroll": "^5.0.0-beta.11",
     "next": "13.5.2",
     "payload": "^2.0.7",
     "payload-admin-bar": "^1.0.6",
